@@ -7,6 +7,7 @@
 int handle_builtin_commands(char **args)
 {
 	char *home;
+	char **env;
 
 	if (strcmp(args[0], "exit") == 0)
 	{
@@ -29,7 +30,7 @@ int handle_builtin_commands(char **args)
 	}
 	else if (strcmp(args[0], "env") == 0)
 	{
-		char **env = environ;
+		env = environ;
 
 		while (*env)
 		{
