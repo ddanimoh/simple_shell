@@ -30,6 +30,7 @@ int handle_builtin_commands(char **args)
 	else if (strcmp(args[0], "env") == 0)
 	{
 		char **env = environ;
+
 		while (*env)
 		{
 			printf("%s\n", *env);
